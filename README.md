@@ -1,2 +1,2 @@
 # sea-blog-console
-基于vue实现的blog课后
+基于vue element实现的blog后台
