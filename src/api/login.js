@@ -2,26 +2,26 @@ import request from '@/utils/request'
 
 export function login(username, password) {
   return request({
-    url: '/user/login',
+    url: 'public/api/blog/login',
     method: 'post',
-    data: {
-      username,
-      password
+    params: {
+      'loginName': username,
+      'password': password
     }
   })
 }
 
 export function getInfo(token) {
   return request({
-    url: '/user/info',
+    url: '/private/api/blog/user',
     method: 'get',
-    params: { token }
+    // params: { token }
   })
 }
 
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: '/logout',
     method: 'post'
   })
 }
